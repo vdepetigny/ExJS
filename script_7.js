@@ -1,3 +1,6 @@
+
+function script_7() {
+
 const books = [
   { title: 'Gatsby le Magnifique', id: 133712, rented: 9 },
   { title: 'A la Recherche du Temps Perdu', id: 237634, rented: 2 },
@@ -48,5 +51,4 @@ console.log(books)
 // Trie les livres par ordre alphabétique
 
 console.log(books.sort((a, b) => a.title.localeCompare(b.title)));
-
-
+}

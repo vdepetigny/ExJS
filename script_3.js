@@ -1,5 +1,7 @@
 // Création d'une demi-pyramide
 
+function script_3() {
+
 let floornumber // Création de la variable avec le nombre de #
 let stone = "#" // "Hashtag unitaire"
 let floor = "" // Variable devant accuillir l'ensemble des # de chaque ligne
@@ -22,4 +24,5 @@ while (floornumber > 0) {
   floornumber -= 1;
   airnumber -= 1;
   console.log(air + floor);
+}
 }

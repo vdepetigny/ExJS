@@ -1,3 +1,6 @@
+
+
+function script_6() {
 const entrepreneurs = [
   { first: 'Steve', last: 'Jobs', year: 1955 },
   { first: 'Bill', last: 'Gates', year: 1955 },
@@ -46,6 +49,4 @@ entrepreneurs.forEach(entrepreneur => {
 // Trie les inventeurs par ordre alphabétique du nom de famille
 
 console.log(entrepreneurs.sort((a, b) => a.last.localeCompare(b.last)));
-
-
-
+}
