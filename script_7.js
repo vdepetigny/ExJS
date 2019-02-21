@@ -38,17 +38,6 @@ books.forEach(book => {
 // Supprime le livre avec l'ID: 133712
 let index = books.findIndex(book => book.id === 133712);
 books.splice(index,1);
-
-
-// books.forEach(book => {
-// 	i = 0
-// 	if (book.id == "133712") {
-// 		console.log(book.title)
-// 		books.splice(i,i)
-// 	}
-// 	i += 1
-// })
-
 console.log(books)
 
 
