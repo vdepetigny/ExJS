@@ -7,6 +7,7 @@ const books = [
 ];
 
 // Est-ce que tous les livres ont été au moins empruntés une fois ?
+
 let nav = true
 books.forEach(book => {
 	if (book.rented === 0){
@@ -21,14 +22,17 @@ if (nav === true) {
 }
 
 // Quel est livre le plus emprunté ?
+
 let mostRented = books.sort((a,b)=>(b.rented - a.rented));
 console.log(mostRented[0])
 
 // Quel est le livre le moins emprunté ?
+
 let leastRented = books.sort((a,b)=>(a.rented - b.rented));
 console.log(leastRented[0])
 
 // Trouve le livre avec l'ID: 873495
+
 books.forEach(book => {
 	if (book.id == "873495") {
 		console.log(book.title)
@@ -36,12 +40,13 @@ books.forEach(book => {
 })
 
 // Supprime le livre avec l'ID: 133712
+
 let index = books.findIndex(book => book.id === 133712);
 books.splice(index,1);
 console.log(books)
 
-
 // Trie les livres par ordre alphabétique
+
 console.log(books.sort((a, b) => a.title.localeCompare(b.title)));
 
 

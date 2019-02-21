@@ -13,17 +13,21 @@ const entrepreneurs = [
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
 
+// Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70
+
 entrepreursOf70s = [];
 entrepreneurs.forEach(entrepreneur => {
   if (entrepreneur.year >= 1970 && entrepreneur.year <= 1980) {
     entrepreursOf70s.push(entrepreneur);
   };
 });
-console.log("Les entrepreneurs nés dans les 70 sont :");
 
+console.log("Les entrepreneurs nés dans les 70 sont :");
 entrepreursOf70s.forEach(entrepreneur => {
   console.log(entrepreneur.first + " " + entrepreneur.last);
 })
+
+// Sors une array qui combien le prénom et le nom des entrepreneurs
 
 entrepreneurNames = [];
 entrepreneurs.forEach(entrepreneur => {
@@ -33,9 +37,13 @@ entrepreneurs.forEach(entrepreneur => {
 
 console.log(entrepreneurNames);
 
+// Quel âge aurait chaque inventeur aujourd'hui ?
+
 entrepreneurs.forEach(entrepreneur => {
   entrepreneur.age = 2019 - entrepreneur.year;
 });
+
+// Trie les inventeurs par ordre alphabétique du nom de famille
 
 console.log(entrepreneurs.sort((a, b) => a.last.localeCompare(b.last)));
 
