@@ -19,19 +19,16 @@ valuesWithDollarSign.forEach(value => {
 let coins = {}
 currencies.forEach((currency, index) => coins[currency] = values[index]);
 
-console.log(coins)
-
 // La ou les crypto qui ont la plus grosse valeur
 
 let result1 = Object.entries(coins).sort((a,b)=>(b[1]-a[1]));
-console.log(result1[0][0])
-console.log(result1[0][1])
+console.log(`La crypto avec la plus grosse valeur est ${result1[0][0]} avec une valeur de $${result1[0][1]}! Je n'ai pas beaucoup d'expérience dans ces choses là en tant que jeune serveur mais je trouve le montant impressionnant, pas vous ?`)
+
 
 // La ou les crypto qui ont la plus petite valeur
 
 let result2 = Object.entries(coins).sort((a,b)=>(a[1]-b[1]));
-console.log(result2[0][0])
-console.log(result2[0][1])
+console.log(`Les cryptos avec la plus petite valeur sont ${result2[0][0]} et  ${result2[1][0]} avec une valeur de $${result2[0][1]}! Nous apprenons décidemment plein de choses ensemble!`)
 
 // Le nombre de crypto contenant le mot "coin"
 
@@ -41,9 +38,9 @@ Object.entries(coins).forEach(([key, value]) => {
   	coinCount.push(key) 
   }
 });
-console.log(coinCount.length)
+console.log(`${coinCount.length} devises comportent les lettres c-o-i-n dans leur appellation, aucune originalité. Personnellement je propose de nommer la prochaine PirateHackerGold, vous en pensez quoi ? Je trouve que j'ai très bon goût pour une console!!!`)
 
-// Les devises, dont le cours est inférieur à 6000 (Indice : on peut comparer en valeur 2 integers mais pas 2 strings
+// Les devises, dont le cours est inférieur à 6000
 
 let coinUnder6000 = {}
 Object.entries(coins).forEach(([key, value]) => {
@@ -52,14 +49,18 @@ Object.entries(coins).forEach(([key, value]) => {
   }
 });
 
-console.log(Object.entries(coinUnder6000).length)
-console.log(Object.entries(coinUnder6000))
+console.log(`${Object.entries(coinUnder6000).length} devises ont un cours inférieur à $6 000. Les devises en question sont les suivantes : `)
+
+Object.entries(coinUnder6000).forEach(([key, value]) => {
+  console.log(`    -   ${key}`)
+ });
+console.log(`Ca en fait un paquet dis donc!!!`)
+
 
 // La devise la plus chère parmi celles dont le cours est inférieur à 6000
 
 let result3 = Object.entries(coinUnder6000).sort((a,b)=>(b[1]-a[1]));
-console.log(result3[0][0])
-console.log(result3[0][1])
-
+console.log(`Parmi celles-ci, ${result3[0][0]} a la plus grosse valeur qui est de $${result3[0][1]}! Je le trouve bien sympatique personnellement`)
+console.log(`On s'amuse comme des fous avec Javascript, je me sens tout emoustillé!!!`)
 
 }

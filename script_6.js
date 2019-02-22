@@ -27,7 +27,7 @@ entrepreneurs.forEach(entrepreneur => {
 
 console.log("Les entrepreneurs nés dans les 70 sont :");
 entrepreursOf70s.forEach(entrepreneur => {
-  console.log(entrepreneur.first + " " + entrepreneur.last);
+  console.log(`   -   ${entrepreneur.first} ${entrepreneur.last} `);
 })
 
 // Sors une array qui combien le prénom et le nom des entrepreneurs
@@ -38,7 +38,12 @@ entrepreneurs.forEach(entrepreneur => {
   entrepreneurNames.push(name);
 })
 
+console.log("Petit array special avec les petits noms de nos entrepreneurs préférés ;)");
 console.log(entrepreneurNames);
+console.log("Je te les mets aussi en liste parce que c'est toi... ");
+entrepreneurNames.forEach(entrepreneur => {
+  console.log(`   -   ${entrepreneur} `);
+})
 
 // Quel âge aurait chaque inventeur aujourd'hui ?
 
@@ -47,6 +52,12 @@ entrepreneurs.forEach(entrepreneur => {
 });
 
 // Trie les inventeurs par ordre alphabétique du nom de famille
-
+console.log("Et les voilà avec leur âge et classés par ordre alphabétique (des noms de famille), parce que l'organisation et la présentation des éléments est essentielle à une bonne compréhension et interprétation des données présentées. Et parce que je suis une super console !");
 console.log(entrepreneurs.sort((a, b) => a.last.localeCompare(b.last)));
+console.log("Idem, je te les mets joliment en liste: ");
+entrepreneurs.forEach(entrepreneur => {
+  console.log(`   -   ${entrepreneur.first} ${entrepreneur.last} a (ou aurait eu...) ${entrepreneur.age} ans`);
+})
+
+
 }

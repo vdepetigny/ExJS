@@ -22,7 +22,7 @@ console.log(`Cet array contient ${withNumber.length} journalistes avec des pseud
 let audeArray = []
 journalists.forEach(journalist => {
 	journalist = journalist.toLowerCase()
-  if (journalist.match("AUDE")) {
+  if (journalist.match("aude")) {
   	audeArray.push(journalist) 
   }
 });
@@ -64,7 +64,7 @@ journalists.forEach(journalist => {
 });
 abc = abc.sort()
 abc.forEach(journalist => {
-  console.log(journalist)
+  console.log(`    -   ${journalist}`)
  });
 
 // Quelle est la position dans l'array de la personne @epenser ?
@@ -73,7 +73,7 @@ console.log(`@epenser est le ${journalists.indexOf("@epenser")}ème élément de
 
 // Quels sont les 50 handles les plus courts de cette array ?
 
-console.log(`Voici la liste des pseudos les plus courts :`)
+console.log(`Voici l'array contenant les pseudos les plus courts :`)
 num = journalists.sort(function(a,b){
   return a.length - b.length;
   })

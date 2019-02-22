@@ -6,12 +6,13 @@ let floornumber // Création de la variable avec le nombre de #
 let stone = "#" // "Hashtag unitaire"
 let floor = "" // Variable devant accuillir l'ensemble des # de chaque ligne
 
-floornumber = prompt('Salut, bienvenue dans ma super pyramide ! nombres Etages?'); // Récupération du nombre
+floornumber = prompt("Salut, bienvenue dans ma super pyramide ! combien d'étage souhaitez-vous ?"); // Récupération du nombre
 
 let airnumber = floornumber-1 // Création de la variable avec le nombre de " "
 let space = " " // "Espace unitaire"
 let air = "" // Variable devant accuillir l'ensemble des " " de chaque ligne
 
+console.log(`Voici votre pyramide :`)
 // Première boucle permettant de construire la ligne
 while (floornumber > 0) {
   air = "";
@@ -25,4 +26,5 @@ while (floornumber > 0) {
   airnumber -= 1;
   console.log(air + floor);
 }
+console.log(`J'aurais pu faire architecte, vous ne trouvez pas ?`)
 }
