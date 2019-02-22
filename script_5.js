@@ -22,7 +22,7 @@ currencies.forEach((currency, index) => coins[currency] = values[index]);
 // La ou les crypto qui ont la plus grosse valeur
 
 let result1 = Object.entries(coins).sort((a,b)=>(b[1]-a[1]));
-console.log(`La crypto avec la plus grosse valeur est ${result1[0][0]} avec une valeur de $${result1[0][1]}! Je n'ai pas beaucoup d'expérience dans ces choses là en tant que jeune serveur mais je trouve le montant impressionnant, pas vous ?`)
+console.log(`La crypto avec la plus grosse valeur est ${result1[0][0]} avec une valeur de $${result1[0][1]}! Je n'ai pas beaucoup d'expérience dans ces choses là en tant que jeune console mais je trouve le montant impressionnant, pas vous ?`)
 
 
 // La ou les crypto qui ont la plus petite valeur
